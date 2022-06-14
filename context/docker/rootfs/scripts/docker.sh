@@ -22,6 +22,7 @@ command_exists() {
 }
 get_distribution() {
     lsb_dist=""
+    # test shell check
     # Every system that we officially support has /etc/os-release
     if [ -r /etc/os-release ]; then
     	lsb_dist="$(. /etc/os-release && echo "$ID")"
